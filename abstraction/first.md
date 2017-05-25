@@ -3,6 +3,7 @@
 ## 1. Iterative
 
   ```js
+  // JavaScript
   const squareOfHipotenuse = function(a, b) {
   return a * a + b * b;
 }
@@ -11,6 +12,7 @@ squareOfHipotenuse( 3, 4 );
 ```
 
 ```Scheme
+; Scheme
 (define (square-of-hipotenuse a b) 
   (+ (* a a) (* b b)))
   
@@ -19,6 +21,7 @@ squareOfHipotenuse( 3, 4 );
 ## 2. Decomposition of first level (abstraction of square)
 
 ```js
+// JavaScript
 const square = function(x) {
   return x * x;
 }
@@ -27,6 +30,7 @@ square(3);
 ```
 
 ```js
+// JavaScript
 const square = function(x) {
   return x * x;
 }
@@ -39,12 +43,14 @@ squareOfHipotenuse( 3, 4 );
 ```
 
 ```Scheme
+; Scheme
 (define (square x) 
   (* x x))
   
  (square 3)
  ```
  ```Scheme
+ ; Scheme
  (define (square x) 
   (* x x))
 
@@ -57,6 +63,7 @@ squareOfHipotenuse( 3, 4 );
 ## 3. Decomposition of second level (abstraction of power)
 
 ```Scheme
+; Scheme
 (define (** x pow) 
   (cond ((> pow 1) (* x (** x (- pow 1))))
         ((= pow 1) x)
@@ -65,6 +72,7 @@ squareOfHipotenuse( 3, 4 );
  ```
  
  ```Scheme
+ ; Scheme
  (define (** x pow) 
   (cond ((> pow 1) (* x (** x (- pow 1))))
         ((= pow 1) x)
@@ -77,6 +85,7 @@ squareOfHipotenuse( 3, 4 );
 ```
 
 ```Scheme
+; Scheme
 (define (** x pow) 
   (cond ((> pow 1) (* x (** x (- pow 1))))
         ((= pow 1) x)
