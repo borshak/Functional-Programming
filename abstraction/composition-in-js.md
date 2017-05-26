@@ -10,17 +10,13 @@ function compose(...pipe) {
 }
 
 function around100(arg) {
-  console.log( "==>", arg );
   return arg.filter(function(item) {
-    console.log(item);
     return (90 < item && item < 110);
   });
 }
 
 function square(arg) {
-  console.log( "==>", arg );
   return arg.map(function(item) {
-    console.log(item);
     return item * item;
   });
 }
@@ -48,4 +44,8 @@ var r2 = fn( arr );
 
 var fn1 = compose(around100, square, average);
 var r3 = fn1( arr );
+
+
+
+
 ```
