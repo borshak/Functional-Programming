@@ -44,8 +44,4 @@ var r2 = fn( arr );
 
 var fn1 = compose(around100, square, average);
 var r3 = fn1( arr );
-
-
-
-
 ```
