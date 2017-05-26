@@ -60,7 +60,19 @@ squareOfHipotenuse( 3, 4 );
 (square-of-hipotenuse 3 4)
 ```
 
-## 3. Decomposition of second level (abstraction of power)
+## 3. Area of a circle
+
+```Scheme
+(define (square x) (* x x))
+
+(define pi 3.1415)
+
+(define (area-of-circle r) (* pi (square r)))
+
+(area-of-circle 10)
+```
+
+## 4. Decomposition of second level (abstraction of power)
 
 ```Scheme
 ; Scheme
